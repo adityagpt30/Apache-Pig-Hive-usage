@@ -1,0 +1,9 @@
+create external table test (Id int,PostTypeId int,Score int,ViewCount int,Body string,OwnerUserId int,OwnerDisplayName string) row format delimited fields terminated by ',';
+
+LOAD DATA INPATH '/Output' OVERWRITE INTO TABLE test;
+
+1. hive>   Select Score from test order by Score desc limit 10;
+
+2. select OwnerUserId, sum(score) as Total_Score from test where owneruserid is not null group by owneruserid order by Total_Score desc limit 10;
+
+3. select count(distinct (owneruserid)) from test where body like '%hadoop%';
