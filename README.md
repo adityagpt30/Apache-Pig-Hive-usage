@@ -1,4 +1,4 @@
-# CA675_Assignment1
+# Pig and Hive Usage CA675
 --------------------------------------------------------------------------------
 1. Get data from Stack Exchange
 2. Load them with PIG
